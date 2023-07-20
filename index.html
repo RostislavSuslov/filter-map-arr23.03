@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4" />
+    <title>map(), filter()</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="sort-container">
+            <div class="column">
+                <label for="nameFilter">name:</label>
+                <input type="text" id="nameFilter" class="form-control" name="nameFilter">
+            </div>
+            <div class="column">
+                <label for="ageFilter">age (between 16 and 74):</label>
+                <input type="range" class="form-range" id="ageFilter" name="ageFilter" min="16" max="74">
+            </div>
+            <div class="column">
+                <label for="genderFilterMale">Male</label>
+                <input type="radio" id="genderFilterMale" name="genderFilter" value="male" />
+                <label for="genderFilterFemale">Female</label>
+                <input type="radio" id="genderFilterFemale" name="genderFilter" value="female" />
+                <label for="all">Male&Female</label>
+                <input type="radio" id="all" name="genderFilter" value="all" checked />
+            </div>
+        </div>
+
+
+        <div class="users-container">
+        
+
+        </div>
+        <!-- <div class="user-jobs">
+            Mark Zuckerberg - основатель и CEO компании Facebook, предприниматель, программист.
+            Claire Boucher - известна под сценическим именем Grimes, канадская певица, автор песен и продюсер.
+            Ty Simpkins - актер.
+            Tom Holland - актер.
+            Bill Gates - сооснователь и бывший исполнительный директор Microsoft, филантроп.
+            Elon Musk - основатель и CEO компаний Tesla, SpaceX, Neuralink и The Boring Company, предприниматель,
+            инженер.
+            Talulah Jane - профессия неизвестна (информации о ней в предоставленном списке нет).
+            Bernard Arnault - предприниматель, председатель и CEO компании LVMH (Louis Vuitton Moët Hennessy).
+            Jeff Bezos - основатель и бывший CEO компании Amazon, предприниматель.
+            Tosca Musk - кинопродюсер.
+            Steve Jobs - сооснователь и бывший CEO компании Apple, предприниматель, изобретатель.
+            Amber Heard - актриса.
+            Laurene Powell - профессия неизвестна (информации о ней в предоставленном списке нет).
+            Eve Jobs - профессия неизвестна (информации о ней в предоставленном списке нет).
+            Chrisann Brennan - профессия неизвестна (информации о ней в предоставленном списке нет).
+            Cara Delevingne - модель, актриса.
+            Cam Gigandet - актер.
+            Sean Faris - актер.
+            Penn Badgley - актер.
+            Camille Vasquez - профессия неизвестна (информации о ней в предоставленном списке нет).
+            Margot Robbie - актриса.
+            Scarlett Johansson - актриса.
+            Angelina Jolie - актриса, режиссер, гуманитарный работник.
+            Gal Gadot - актриса.
+            Vito Schnabel - художник, куратор и галерист.
+            Dylan Minnette - актер.
+            Ansel Elgort - актер.
+            Timothée Chalamet - актер.
+            Josh Hutcherson - актер.
+            Aimee Wood - профессия неизвестна (информации о ней в предоставленном списке нет).
+            Chloë Moretz - актриса.
+            Mimi Keene - актриса.
+            Elle Fanning - актриса.
+            Dakota Fanning - актриса.
+            Justice Smith - актер.
+            Isabella Sermon - актриса.
+            Omar Sy - актер.
+        </div> -->
+    </main>
+    
+    <script src="js/script.js"></script>
+</body>
+
+</html>
