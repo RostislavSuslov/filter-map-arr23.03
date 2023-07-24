@@ -293,11 +293,6 @@ window.addEventListener('load', function() {
             gender: "all",
         }
 
-       
-
-
- 
-
 
     function getGenderVal() {
         genderRadio.forEach(item => {
@@ -306,7 +301,7 @@ window.addEventListener('load', function() {
                 config.gender = val
               
 
-                const filteredForGender = genderFilter()
+                const filteredForGender = mainFilter();
                 renderPerson(filteredForGender);
             })
         })
@@ -317,9 +312,8 @@ window.addEventListener('load', function() {
         ageRange.addEventListener("input", (event) => {
            let val = event.target.value
            config.age = val
-          
          
-           const filteredForAge = ageFilter()
+           const filteredForAge = mainFilter();
            renderPerson(filteredForAge);
         })
     }
@@ -330,7 +324,7 @@ window.addEventListener('load', function() {
             let val = event.target.value.toLowerCase().trim()
             config.name = val
 
-            const filteredForName = nameFilter()
+            const filteredForName = mainFilter();
             renderPerson(filteredForName)
         })
     }
@@ -339,17 +333,35 @@ window.addEventListener('load', function() {
 
 
    
+    // function ageFilter() {
+    //     return peopleArr.filter(item => item.age <= config.age)
+    // } 
 
-    function ageFilter() {
-        return peopleArr.filter(item => item.age <= config.age)
-    } 
+    // function genderFilter() {
+    //     return (config.gender === "all" ? peopleArr : peopleArr.filter(item => item.gender === config.gender))
+    // }
 
-    function genderFilter() {
-        return (config.gender === "all" ? peopleArr : peopleArr.filter(item => item.gender === config.gender))
-    }
+    // function nameFilter() {
+    //     return peopleArr.filter(item => item.name.toLowerCase().includes(config.name))
+    // }
 
-    function nameFilter() {
-        return peopleArr.filter(item => item.name.toLowerCase().includes(config.name))
-    }
-})
  
+
+
+    function mainFilter() {
+        const filtered = peopleArr.filter(item => {
+            const setAge =  item.age <= config.age
+            const setGender = config.gender === "all" ? peopleArr : item.gender === config.gender 
+            const setName = item.name.toLowerCase().includes(config.name) 
+
+            return setName && setGender && setAge
+        })
+        return filtered;
+    }
+
+ 
+
+
+ 
+})
+  
